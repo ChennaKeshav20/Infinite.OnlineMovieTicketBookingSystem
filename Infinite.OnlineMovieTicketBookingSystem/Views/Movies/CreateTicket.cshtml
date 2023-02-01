@@ -1,0 +1,29 @@
+﻿@model TicketViewModel
+@{
+    ViewData["Title"] = "CreateTicket";
+}
+
+<h1>CreateTicket</h1>
+
+
+<form asp-controller="Movies" asp-action="Create" method="post">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-2">
+                <label asp-for="NoOfSeats" class="form-label"></label>
+                <input type="text" asp-for="NoOfSeats" class="form-control" />
+                <span asp-validation-for="NoOfSeats"></span>
+            </div>
+            <div class="mb-2">
+                <label asp-for="Price" class="form-label"></label>
+                <input type="text" asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price"></span>
+            </div>
+           
+           
+            <div class="mt-2 d-grid">
+                <input type="submit" class="btn btn-primary" value="Add New" />
+            </div>
+        </div>
+    </div>
+</form>

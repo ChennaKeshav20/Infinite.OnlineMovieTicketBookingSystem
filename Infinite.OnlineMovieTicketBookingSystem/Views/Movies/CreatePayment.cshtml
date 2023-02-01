@@ -1,0 +1,53 @@
+﻿@model PaymentViewModel
+@{
+    ViewData["Title"] = "CreatePayment";
+}
+
+<h1>Create the Payment</h1> 
+
+
+<form asp-asp-controller="Payment" asp-action="Create" method="post">
+    <div class="row">
+        <div class="col-md-5">
+           @* <div class="mb-2">
+                <label asp-for="PaymentId" class="form-label">
+                    </label>
+                    <input type="text" asp-for="PaymentId" class="form-control" />
+                    <span asp-validation-for="PaymentId">
+                        </span>
+                        </div>*@
+                        <div class="mb-2">
+                            <label asp-for="CreditCardNumber" class="form-label"></label>
+                            <input type="text" asp-for="CreditCardNumber" class="form-control" />
+                            <span asp-validation-for="CreditCardNumber"></span>
+                            </div>
+                            <div class="mb-2">
+                                <label asp-for="MonthAndYear" class="form-label"></label>
+                                <input type="text" asp-for="MonthAndYear" class="form-control" placeholder="MM/YY" />
+                                <span asp-validation-for="MonthAndYear"></span>
+                                </div>
+                                <div class="mb-2">
+                                    <label asp-for="Cvv" class="form-label">
+                                    </label><input type="password" asp-for="Cvv" class="form-control" />
+                                    <span asp-validation-for="Cvv"></span>
+                                </div>
+                                <div class="mb-2">
+                                    <label asp-for="Amount" class="form-label"></label>
+                                    <input type="text" asp-for="Amount" class="form-control" />
+                                    <span asp-validation-for="Amount"></span>
+                                </div>
+                                <div class="mb-2">
+                                    <label asp-for="TicketId" class="form-label"></label>
+                                    <input type="text" asp-for="TicketId" class="form-control" />
+                                    <span asp-validation-for="TicketId"></span>
+                                </div>
+                                <div class="mb-2"><label asp-for="NoOfSeats" class="form-label"></label>
+                                    <input type="text" asp-for="NoOfSeats" class="form-control" />
+                                    <span asp-validation-for="NoOfSeats"></span>
+                                </div>
+                                <div>
+                                    <input type="submit" class="btn btn-primary" value="Pay"   />
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </form>

@@ -1,0 +1,20 @@
+in create page 
+
+-movie name
+-production name
+-release date
+-no of tickets
+-screen no
+-show time 
+
+
+in model 
+movie name
+-production name
+-release date
+-ticket(100)
+-fk-screen no 
+-fk- show time(morning,evening,matinee,night)
+
+
+details 

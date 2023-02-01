@@ -1,0 +1,51 @@
+﻿@model MovieViewModel
+@{
+	ViewData["Title"] = "Create";
+}
+
+<h1>Create a Movie</h1>
+<form asp-asp-controller="Movies" asp-action="Create" method="post">
+	<div class="row">
+		<div class="col-md-5">
+			<div class="mb-2">
+				<label asp-for="MovieName" class="form-label"></label>
+				<input type="text" asp-for="MovieName" class="form-control" />
+				<span asp-validation-for="MovieName"></span></div>
+				<div class="mb-2">
+					<label asp-for="ProductionName" class="form-label"></label>
+					<input type="text" asp-for="ProductionName" class="form-control" />
+					<span asp-validation-for="ProductionName"></span>
+				</div>
+				<div class="mb-2">
+					<label asp-for="MovieDescription" class="form-label"></label>
+					<input type="text" asp-for="MovieDescription" class="form-control" />
+					<span asp-validation-for="MovieDescription"></span>
+				</div>
+			<div class="mb-2">
+				<label asp-for="ReleaseDate" class="form-label"></label>
+				<input type="date" asp-for="ReleaseDate" class="form-control" />
+				<span asp-validation-for="ReleaseDate"></span>
+			</div>
+			<div class="mb-2">
+				<label asp-for="GenreName" class="form-label"></label>
+				<select asp-for="GenreGenreId" asp-items="@(new SelectList(Model.Genres,"GenreId","GenreName"))" class="form-select"><option value="">--Select--</option></select>
+				<span asp-validation-for="GenreGenreId"></span>
+			</div>
+			
+			<div class="mb-2">
+					<label asp-for="ScreenScreenId" class="form-label"></label>
+				<select asp-for="ScreenScreenId" asp-items="@(new SelectList(Model.screens,"ScreenId","ScreenName"))" class="form-select"><option value="">--Select--</option></select>
+				<span asp-validation-for="ScreenScreenId"></span>
+				</div>
+			<div class="mb-2">
+				<label asp-for="ShowShowId" class="form-label"></label>
+				<select asp-for="ShowShowId" asp-items="@(new SelectList(Model.shows,"ShowId","ShowType"))" class="form-select"><option value="">--Select--</option></select>
+				<span asp-validation-for="ShowShowId"></span>
+			</div>
+			
+				<div>
+					<input type="submit" class="btn btn-primary" value="Add" />
+					</div>
+					</div>
+					</div>
+</form>
